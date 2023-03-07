@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DayOffComponent } from './day-off/day-off.component';
+import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
+import { DayOffComponent } from './attendance-management/day-off/day-off.component';
 import { MainZoneComponent } from './main-zone/main-zone.component';
 
 const routes: Routes = [
@@ -20,6 +21,9 @@ const routes: Routes = [
       }
     ]
   },
+  { path: 'attendance', component: AttendanceManagementComponent },
+  { path: 'attendance/dayoff', component: DayOffComponent },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 
 @NgModule({

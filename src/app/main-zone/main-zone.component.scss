@@ -1,0 +1,48 @@
+.warp {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: auto;
+    .content {
+        align-items: center;
+        display: flex;
+        flex-wrap: inherit;
+        justify-content: center;
+        margin: auto;
+        .items {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: inherit;
+            flex-direction: column;
+            height: 200px;
+            justify-content: center;
+            margin: 25px;
+            padding: 50px 68px 44px 68px;
+            width: 200px;
+            .images {
+                display: block;
+                height: 64px;
+                margin: 0 auto;
+                width: 64px;
+            }
+            .text{
+                font-size: 16px;
+                font-weight: bold;
+                margin: 18px 0px 0 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+}
+.image {
+    bottom: 0px;
+    height: 350px;
+    position: fixed;
+    right: 0px;
+    width: 350px;
+    z-index: -999;
+}
