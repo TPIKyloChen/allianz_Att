@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
 import { DayOffComponent } from './attendance-management/day-off/day-off.component';
+import { ErrandsComponent } from './attendance-management/errands/errands.component';
 import { MainZoneComponent } from './main-zone/main-zone.component';
 
 const routes: Routes = [
@@ -12,17 +14,20 @@ const routes: Routes = [
         (m) => m.SignManagementModule
       ),
   },
+  { path: '', component: MainZoneComponent},
   {
-    path: '',
-    component: MainZoneComponent,
+    path: 'attendance', component: AttendanceManagementComponent,
     children: [
       {
-        path: '', redirectTo: "/", pathMatch: "full"
+        path: 'errands',
+        component: ErrandsComponent,
+      },
+      {
+        path: 'dayoff',
+        component: DayOffComponent,
       }
-    ]
+    ],
   },
-  { path: 'attendance', component: AttendanceManagementComponent },
-  { path: 'attendance/dayoff', component: DayOffComponent },
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 

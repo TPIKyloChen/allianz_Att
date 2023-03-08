@@ -1,0 +1,36 @@
+<div class="yearly">
+    <div class="content">
+        <p>年度特別休假(含遞延)
+            <span class="detail">遞延休假規則</span>
+        </p>
+        <div class="yearlyDayOffStas">
+            <div class="singleStas" *ngFor="let item of [1,2]">
+                <div class="circle">
+                    <span class="text">
+                        <b>1</b>/3
+                    </span>
+                    <span class="text">已休/可休</span>
+                </div>
+                <div class="subTitle">2021給假</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content float">
+        <p>
+            2022年度累計已休假日數
+            <span class="detail">假別天數總覽</span>
+        </p>
+        <div class="yearlyLeaveStas">
+            <div class="singleStas" *ngFor="let item of [1,2,3,4,5]">
+                <div class="circle">
+                    <span class="text">
+                        <b>1</b>天
+                    </span>
+                </div>
+                <div class="subTitle">病假-未住院</div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,12 @@
+<div class="toggle">
+    <span class="apply" [ngClass]="{'toggleActive': isApply}" (click)="isApply=!isApply">申請</span>
+    <span class="search" [ngClass]="{'toggleActive': !isApply}" (click)="isApply=!isApply">查詢</span>
+</div>
+
+<!-- form表單 -->
+<app-application-form></app-application-form>
+
+<div class="submit">
+    <span class="apply" [ngClass]="{'toggleActive': isSave}" (click)="isSave=!isSave">暫存</span>
+    <span class="search" [ngClass]="{'toggleActive': !isSave}" (click)="isSave=!isSave">提交申請</span>
+</div>

@@ -1,0 +1,35 @@
+<div class="form">
+    <div class="type">
+        <label for="item">
+            <span>*</span>假別
+        </label>
+        <select name="item" id="item">
+        <option *ngFor="let item of [1,2,3,4]" [value]="item">{{item}}</option>
+        </select>
+    </div>
+    <ng-container>
+        <div class="dates start">
+            <label for="startDate">
+                <span>*</span>請假開始日
+            </label>
+            <input type="date" name="startDate" id="startDate" [formControl]="startDate" [max]="endDate.value">
+        </div>
+        <div class="dates">
+            <label for="dueDate">
+                <span>*</span>請假結束日
+            </label>
+            <input type="date" name="dueDate" id="dueDate" [min]="startDate.value" [formControl]="endDate">
+        </div>
+    </ng-container>
+    <div class="textarea">
+        <label for="story">
+            <span>*</span>請假事由</label>
+        <textarea id="story" name="story" rows="5" cols="33"></textarea>
+    </div>
+
+    <div class="upload">
+        <p>附件</p>
+        <label for="file">上傳附件</label>
+        <input type="file" name="file" id="file" hidden>
+    </div>
+</div>

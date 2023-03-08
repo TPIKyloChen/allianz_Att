@@ -1,0 +1,35 @@
+// 申請/查詢 切換
+.toggle, .submit{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 31px;
+    :nth-child(2) {
+        margin-left: 20px;
+        border: 1px solid #007ab3;
+    }
+    .apply {
+        border: 1px solid #007ab3;
+        color: #007ab3;
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        width: 109px;
+    }
+    .search {
+        border-bottom: 1px solid #007ab3;
+        border-right: 1px solid #007ab3;
+        border-top: 1px solid #007ab3;
+        color: #007ab3;
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        width: 109px;
+    }
+    .toggleActive {
+        background-color: #007ab3;
+        color: #fff;
+    }
+}

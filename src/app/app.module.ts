@@ -5,17 +5,24 @@ import { NgModule } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppComponent } from './app.component';
+import { ApplicationFormComponent } from './application-form/application-form.component';
 import { AppRoutingModule } from "./app-routing.module";
-import { DayOffComponent } from './attendance-management/day-off/day-off.component';
-import { MainZoneComponent } from './main-zone/main-zone.component';
-import { MaterialModule } from './material.module';
 import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
+import { DayOffComponent } from './attendance-management/day-off/day-off.component';
+import { ErrandsComponent } from './attendance-management/errands/errands.component';
+import { MainZoneComponent } from './main-zone/main-zone.component';
+import { YearlyStasComponent } from './yearly-stas/yearly-stas.component';
+
+import { MaterialModule } from './material.module';
 @NgModule({
   declarations: [
     AppComponent,
+    ApplicationFormComponent,
     AttendanceManagementComponent,
     DayOffComponent,
+    ErrandsComponent,
     MainZoneComponent,
+    YearlyStasComponent,
   ],
   imports: [
     BrowserAnimationsModule,
