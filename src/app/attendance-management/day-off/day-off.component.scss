@@ -4,13 +4,11 @@
     display: flex;
     justify-content: center;
     margin-top: 31px;
-    :nth-child(2) {
-        margin-left: 20px;
-        border: 1px solid #007ab3;
-    }
-    .apply {
-        border: 1px solid #007ab3;
+    .apply{
+        border: 2px solid #007ab3;
+        border-radius: 4px 0px 0px 4px;
         color: #007ab3;
+        cursor: pointer;
         font-size: 14px;
         height: 30px;
         line-height: 30px;
@@ -18,10 +16,12 @@
         width: 109px;
     }
     .search {
-        border-bottom: 1px solid #007ab3;
-        border-right: 1px solid #007ab3;
-        border-top: 1px solid #007ab3;
+        border-bottom: 2px solid #007ab3;
+        border-right: 2px solid #007ab3;
+        border-radius: 0px 4px 4px 0px;
+        border-top: 2px solid #007ab3;
         color: #007ab3;
+        cursor: pointer;
         font-size: 14px;
         height: 30px;
         line-height: 30px;
@@ -31,5 +31,28 @@
     .toggleActive {
         background-color: #007ab3;
         color: #fff;
+    }
+}
+
+.submit{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 31px;
+    .save, .submited {
+        border: 2px solid #007ab3;
+        color: #007ab3;
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        width: 109px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    :nth-child(1) {
+        background-color: #007ab3;
+        color: #fff;
+        margin-right: 20px;
     }
 }

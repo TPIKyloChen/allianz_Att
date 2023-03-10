@@ -11,6 +11,7 @@ import { AttendanceManagementComponent } from './attendance-management/attendanc
 import { DayOffComponent } from './attendance-management/day-off/day-off.component';
 import { ErrandsComponent } from './attendance-management/errands/errands.component';
 import { MainZoneComponent } from './main-zone/main-zone.component';
+import { TableComponent } from './table/table.component';
 import { YearlyStasComponent } from './yearly-stas/yearly-stas.component';
 
 import { MaterialModule } from './material.module';
@@ -21,6 +22,7 @@ import { MaterialModule } from './material.module';
     AttendanceManagementComponent,
     DayOffComponent,
     ErrandsComponent,
+    TableComponent,
     MainZoneComponent,
     YearlyStasComponent,
   ],

@@ -12,8 +12,18 @@ import { Router } from "@angular/router";
 export class AttendanceManagementComponent {
   tabIndex = 0;
 
-  constructor(private router: Router) { }
-  ngOnInit(): void {}
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    // check index when reload page
+    switch (this.router.url) {
+      case '/attendance/errands':
+        this.tabIndex = 0;
+        break;
+      case '/attendance/dayoff':
+        this.tabIndex = 1;
+        break;
+    }
+  }
 
   tabChange(e: MatTabChangeEvent) {
     if (e.index === 0) {

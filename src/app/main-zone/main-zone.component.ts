@@ -14,6 +14,6 @@ export class MainZoneComponent {
     
   }
   goto(i: number) { // 前往路徑
-    this.router.navigate(["attendance"]);
+    this.router.navigate(["attendance/errands"]);
   }
 }

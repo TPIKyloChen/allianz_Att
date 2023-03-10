@@ -4,9 +4,11 @@
 </div>
 
 <!-- form表單 -->
-<app-application-form></app-application-form>
+<app-application-form *ngIf="isApply"></app-application-form>
 
-<div class="submit">
-    <span class="apply" [ngClass]="{'toggleActive': isSave}" (click)="isSave=!isSave">暫存</span>
-    <span class="search" [ngClass]="{'toggleActive': !isSave}" (click)="isSave=!isSave">提交申請</span>
+<app-table *ngIf="!isApply"></app-table>
+
+<div class="submit" *ngIf="isApply">
+    <span class="save" (click)="submit(false)">暫存</span>
+    <span class="submited" (click)="submit(true)">提交申請</span>
 </div>

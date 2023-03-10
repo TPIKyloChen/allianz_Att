@@ -11,5 +11,8 @@ export class DayOffComponent {
   startDate = new FormControl(new Date());
   endDate = new FormControl(new Date());
   isApply = true;
-  isSave = true;
+
+  submit(isSubmit: boolean) {
+    console.log(isSubmit);
+  }
 }

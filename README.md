@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 全域的component.ts
 1. application-form.component
 2. yearly-stas.component
+3. table.component

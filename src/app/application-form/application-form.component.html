@@ -1,29 +1,45 @@
 <div class="form">
-    <div class="type">
-        <label for="item">
-            <span>*</span>假別
-        </label>
-        <select name="item" id="item">
-        <option *ngFor="let item of [1,2,3,4]" [value]="item">{{item}}</option>
-        </select>
+    <div class="formContent">
+        <div class="type" *ngFor="let item of [1,2,3]">
+            <label for="item">
+                <sup>*</sup>假別
+            </label>
+            <mat-form-field appearance="fill" class="datePicker">
+                <mat-icon>expand_more</mat-icon>
+                <mat-select>
+                    <mat-option *ngFor="let items of [1,2,3]" [value]="items">
+                        {{items}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
     </div>
     <ng-container>
         <div class="dates start">
             <label for="startDate">
-                <span>*</span>請假開始日
+                <sup>*</sup>請假開始日
             </label>
-            <input type="date" name="startDate" id="startDate" [formControl]="startDate" [max]="endDate.value">
+            <mat-form-field appearance="fill" class="datePicker">
+                <input matInput [matDatepicker]="picker" placeholder="請選擇" (click)="picker.open()" name="startDate" id="startDate" [min]="endDate.value" [formControl]="startDate">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker panelClass="monthPicker"></mat-datepicker>
+            </mat-form-field>
         </div>
+
         <div class="dates">
             <label for="dueDate">
-                <span>*</span>請假結束日
+                <sup>*</sup>請假結束日
             </label>
-            <input type="date" name="dueDate" id="dueDate" [min]="startDate.value" [formControl]="endDate">
+            <mat-form-field appearance="fill" class="datePicker">
+                <input matInput [matDatepicker]="picker2" placeholder="請選擇" name="dueDate" id="dueDate" [min]="startDate.value" [formControl]="endDate" (click)="picker2.open()">
+                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2 panelClass="monthPicker"></mat-datepicker>
+            </mat-form-field>
         </div>
     </ng-container>
     <div class="textarea">
         <label for="story">
-            <span>*</span>請假事由</label>
+            <sup>*</sup>請假事由</label>
         <textarea id="story" name="story" rows="5" cols="33"></textarea>
     </div>
 
@@ -33,3 +49,11 @@
         <input type="file" name="file" id="file" hidden>
     </div>
 </div>
+
+
+
+<!-- <mat-form-field appearance="fill">
+    <input matInput [matDatepicker]="picker" placeholder="請選擇" (click)="picker.open()">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
