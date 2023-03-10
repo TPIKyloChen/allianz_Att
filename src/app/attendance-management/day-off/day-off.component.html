@@ -9,7 +9,7 @@
 
 <ng-container *ngIf="!isApply">
 
-    <ng-container *ngIf="isExpend">
+    <ng-container *ngIf="isExpand">
         <div class="datePicker">
             <app-datepicker></app-datepicker>
             <app-datepicker></app-datepicker>
@@ -21,12 +21,7 @@
         </div>
     </ng-container>
 
-    <div class="line">
-        <div class="lineLeft"></div>
-        <mat-icon>{{isExpend? 'expand_less':'expand_more'}}</mat-icon>
-        <p class="text" (click)="isExpend=!isExpend">收合</p>
-        <div class="lineRight"></div>
-    </div>
+    <app-collapse (click)="isExpand=!isExpand" [isExpand]="isExpand"></app-collapse>
 
     <app-table></app-table>
 </ng-container>

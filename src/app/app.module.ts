@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
+import { CollapseComponent } from './component/collapse/collapse.component';
 import { DatepickerComponent } from './component/datepicker/datepicker.component';
 import { DayOffComponent } from './attendance-management/day-off/day-off.component';
 import { ErrandsComponent } from './attendance-management/errands/errands.component';
@@ -22,6 +23,7 @@ import { MaterialModule } from './material.module';
     AppComponent,
     ApplicationFormComponent,
     AttendanceManagementComponent,
+    CollapseComponent,
     DatepickerComponent,
     DayOffComponent,
     ErrandsComponent,

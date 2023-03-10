@@ -3,6 +3,12 @@ table {
     th, td {
         text-align: center;
     }
+    th {
+        border-bottom: 2px solid #000;
+    }
+}
+.mat-elevation-z8 {
+    box-shadow: unset;
 }
 
 //material
