@@ -1,0 +1,66 @@
+.line {
+    cursor: pointer;
+    display: flex;
+    .lineLeft, .lineRight {
+        background-color: #c2c2c2;
+        height: 1px;
+        margin: 40px 0px;
+        position: relative;
+        width: 50%;
+        &::before,
+        &::after {
+            background-color: #c2c2c2;
+            content: "";
+            height: 1px;
+            line-height: 1px;
+            position: absolute;
+            top: 0;
+            width: 50%;
+        }
+        &::before {
+            left: 0;
+        }
+        &::after {
+            right: 0;
+        }
+    }
+    .text {
+        margin: 33px 10px 33px 0px;
+        width: 30px;
+    }
+    mat-icon {
+        font-size: 16px;
+        height: 20px;
+        margin: 30px 5px 30px 5px;
+        line-height: 20px;
+        text-align: center;
+        width: 20px;
+    }
+}
+
+.search {
+    display: block;
+    text-align: right;
+    .button {
+        background-color: #007ab3;
+        border: 2px solid #007ab3;
+        border-radius: 4px;
+        color: #fff;
+        display: inline-block;
+        font-size: 13px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        width: 120px;
+        cursor: pointer;
+    }
+}
+
+.datePicker {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    *{
+        width: 30%;
+    }
+}

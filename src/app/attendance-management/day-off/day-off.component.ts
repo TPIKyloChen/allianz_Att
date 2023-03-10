@@ -10,7 +10,8 @@ import { MatTabChangeEvent } from '@angular/material/tabs';
 export class DayOffComponent {
   startDate = new FormControl(new Date());
   endDate = new FormControl(new Date());
-  isApply = true;
+  isApply = true; //申請=true, 查詢=false
+  isExpend = true; //合=true 收=false
 
   submit(isSubmit: boolean) {
     console.log(isSubmit);

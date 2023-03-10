@@ -8,9 +8,11 @@ import { AppComponent } from './app.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 import { DayOffComponent } from './attendance-management/day-off/day-off.component';
 import { ErrandsComponent } from './attendance-management/errands/errands.component';
 import { MainZoneComponent } from './main-zone/main-zone.component';
+import { SelectComponent } from './select/select.component';
 import { TableComponent } from './table/table.component';
 import { YearlyStasComponent } from './yearly-stas/yearly-stas.component';
 
@@ -20,8 +22,10 @@ import { MaterialModule } from './material.module';
     AppComponent,
     ApplicationFormComponent,
     AttendanceManagementComponent,
+    DatepickerComponent,
     DayOffComponent,
     ErrandsComponent,
+    SelectComponent,
     TableComponent,
     MainZoneComponent,
     YearlyStasComponent,

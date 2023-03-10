@@ -1,0 +1,18 @@
+.formContent {
+    label {
+        color: #414141;
+        font-weight: bold;
+        sup {
+            color: rgb(255, 0, 0);
+        }
+    }
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .type {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        color: #007ab3;
+    }
+}

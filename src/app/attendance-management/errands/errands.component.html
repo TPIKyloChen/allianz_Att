@@ -1,1 +1,20 @@
+<ng-container *ngIf="isExpend">
+    <div class="datePicker">
+        <app-datepicker></app-datepicker>
+        <app-datepicker></app-datepicker>
+        <app-select></app-select>
+    </div>
+
+    <div class="search">
+        <span class="button">查詢</span>
+    </div>
+</ng-container>
+
+<div class="line">
+    <div class="lineLeft"></div>
+    <mat-icon>{{isExpend? 'expand_less':'expand_more'}}</mat-icon>
+    <p class="text" (click)="isExpend=!isExpend">收合</p>
+    <div class="lineRight"></div>
+</div>
+
 <app-table></app-table>

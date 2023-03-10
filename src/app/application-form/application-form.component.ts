@@ -7,6 +7,4 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./application-form.component.scss']
 })
 export class ApplicationFormComponent {
-  startDate = new FormControl(new Date());
-  endDate = new FormControl(new Date());
 }

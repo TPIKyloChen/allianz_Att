@@ -1,42 +1,9 @@
 <div class="form">
-    <div class="formContent">
-        <div class="type" *ngFor="let item of [1,2,3]">
-            <label for="item">
-                <sup>*</sup>假別
-            </label>
-            <mat-form-field appearance="fill" class="datePicker">
-                <mat-icon>expand_more</mat-icon>
-                <mat-select>
-                    <mat-option *ngFor="let items of [1,2,3]" [value]="items">
-                        {{items}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-        </div>
+    <app-select></app-select>
+    <div class="datepicker">
+        <app-datepicker></app-datepicker>
+        <app-datepicker></app-datepicker>
     </div>
-    <ng-container>
-        <div class="dates start">
-            <label for="startDate">
-                <sup>*</sup>請假開始日
-            </label>
-            <mat-form-field appearance="fill" class="datePicker">
-                <input matInput [matDatepicker]="picker" placeholder="請選擇" (click)="picker.open()" name="startDate" id="startDate" [min]="endDate.value" [formControl]="startDate">
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker panelClass="monthPicker"></mat-datepicker>
-            </mat-form-field>
-        </div>
-
-        <div class="dates">
-            <label for="dueDate">
-                <sup>*</sup>請假結束日
-            </label>
-            <mat-form-field appearance="fill" class="datePicker">
-                <input matInput [matDatepicker]="picker2" placeholder="請選擇" name="dueDate" id="dueDate" [min]="startDate.value" [formControl]="endDate" (click)="picker2.open()">
-                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
-                <mat-datepicker #picker2 panelClass="monthPicker"></mat-datepicker>
-            </mat-form-field>
-        </div>
-    </ng-container>
     <div class="textarea">
         <label for="story">
             <sup>*</sup>請假事由</label>

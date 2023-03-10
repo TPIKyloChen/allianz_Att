@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./errands.component.scss']
 })
 export class ErrandsComponent {
-
+  isExpend = true; //合=true 收=false
 }
