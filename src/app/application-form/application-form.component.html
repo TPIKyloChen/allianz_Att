@@ -1,8 +1,24 @@
 <div class="form">
-    <app-select></app-select>
+    <div class="select">
+        <app-select [list]="dayOffList" [label]="defaultLabel" (emitSelectData)="emitSelectData($event)"></app-select>
+        <ng-container *ngFor="let item of selectOption">
+            <ng-container [ngSwitch]="item">
+                <ng-container *ngSwitchCase="item === '族別' || item === '親屬關係' ? item : '' ">
+                    <app-select [label]="item"></app-select>
+                </ng-container>
+                <ng-container *ngSwitchCase="'眷屬身故日'">
+                    <app-datepicker [label]="item"></app-datepicker>
+                </ng-container>
+                <ng-container *ngSwitchDefault>
+                    <app-datepicker [label]="item"></app-datepicker>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+
     <div class="datepicker">
-        <app-datepicker></app-datepicker>
-        <app-datepicker></app-datepicker>
+        <app-datepicker [label]="'請假開始日'"></app-datepicker>
+        <app-datepicker [label]="'請假結束日'"></app-datepicker>
     </div>
     <div class="textarea">
         <label for="story">

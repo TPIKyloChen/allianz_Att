@@ -1,12 +1,12 @@
 <div class="warp">
     <div class="dates">
         <label for="startDate">
-            <sup>*</sup>請假開始日
+            <sup>*</sup>{{label}}
         </label>
         <mat-form-field appearance="fill" class="datePicker">
             <input matInput [matDatepicker]="picker" placeholder="請選擇" (click)="picker.open()" name="startDate" id="startDate" [min]="endDate.value" [formControl]="startDate">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker panelClass="monthPicker"></mat-datepicker>
+            <mat-datepicker #picker panelClass="matRole"></mat-datepicker>
         </mat-form-field>
     </div>
 </div>

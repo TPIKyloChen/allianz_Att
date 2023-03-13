@@ -1,13 +1,13 @@
 <div class="formContent">
     <div class="type">
         <label for="item">
-            <sup>*</sup>假別
+            <sup>*</sup>{{label}}
         </label>
         <mat-form-field appearance="fill" class="datePicker">
             <mat-icon>expand_more</mat-icon>
-            <mat-select>
-                <mat-option *ngFor="let items of [1,2,3]" [value]="items">
-                    {{items}}
+            <mat-select panelClass="matRole" (selectionChange)="changeSelect($event)">
+                <mat-option *ngFor="let item of list" [value]="item">
+                    <span class="matOption">{{item.name}}</span>
                 </mat-option>
             </mat-select>
         </mat-form-field>

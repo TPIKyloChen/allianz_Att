@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./datepicker.component.scss']
 })
 export class DatepickerComponent {
+  @Input() label: string | undefined
   startDate = new FormControl(new Date());
   endDate = new FormControl(new Date());
 }

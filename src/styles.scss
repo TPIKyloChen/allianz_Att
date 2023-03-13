@@ -2,6 +2,8 @@
 @import "./app/styles/global.scss";
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+$mainThemeColor: #006192;
+
 body {
     background-color: #fff;
     margin: 0px;
@@ -18,3 +20,86 @@ p {
     letter-spacing: 0.67px;
     text-align: center;
 }
+
+// -----material 客製化-----
+// mat-form-field
+.datePicker{
+    .mat-datepicker-toggle{
+        color:#006192;
+    }
+    .mdc-line-ripple::after {
+        border-bottom-color:#006192;
+    }
+    .mdc-text-field{
+        padding: unset;
+    }
+    .mdc-text-field--filled:not(.mdc-text-field--disabled){
+        background-color: #fff;
+    }
+    .mat-mdc-form-field-focus-overlay {
+        background-color: #fff;
+    }
+    .mat-mdc-icon-button.mat-mdc-button-base {
+        padding: 0px;
+        width: 24px;
+        height: 24px;
+    }
+    .mat-mdc-icon-button .mat-mdc-button-touch-target {
+        width: unset;
+        height: unset;
+    }
+    .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
+        padding: 2px;
+    }
+    .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix{
+        padding: 2px     ;
+    }
+    .mat-mdc-form-field-infix, .mat-mdc-form-field-infix {
+        min-height: unset;
+    }
+    .mat-mdc-icon-button {
+        --mat-mdc-button-persistent-ripple-color: none;
+        --mat-mdc-button-ripple-color: none;
+    }
+    .mat-mdc-select-arrow svg{
+        display: none;
+    }
+    mat-icon {
+        position: absolute;
+        right: 0px;
+    }
+    .mat-pseudo-checkbox-checked::after {
+        color: $mainThemeColor;
+    }
+
+}
+
+// panalClass
+.matRole {
+    // calendar
+    .mat-calendar-body-selected {
+        background-color: $mainThemeColor;
+    }
+    .mat-calendar-body-cell {
+        :hover
+            &.mat-calendar-body-cell-content {
+                background-color: $mainThemeColor;
+        }
+    }
+    .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+        .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+            background-color: rgba(0, 0, 0, 0.3);
+    }
+    // calendar
+    // select
+    .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after {
+        color: $mainThemeColor;
+    }
+    .matOption {
+        color: rgba(0, 0, 0, 0.87);
+    }
+    // select
+}
+// -----material 客製化-----
+
+

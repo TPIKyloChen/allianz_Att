@@ -1,5 +1,10 @@
-table {
+.container {
     width: 100%;
+    max-width: 100%;
+    overflow: auto;
+  }
+table {
+    width: 720px; // 手機最大寬度ß
     th, td {
         text-align: center;
     }
