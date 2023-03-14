@@ -1,7 +1,7 @@
 <div class="yearly">
     <div class="content">
         <p>年度特別休假(含遞延)
-            <span class="detail">遞延休假規則</span>
+            <span class="detail" (click)="openDialog('ruleOfDayDelay')">遞延休假規則</span>
         </p>
         <div class="yearlyDayOffStas">
             <div class="singleStas" *ngFor="let item of [1,2]">
@@ -19,6 +19,7 @@
     <div class="content float">
         <p>
             2022年度累計已休假日數
+            <mat-icon (click)="openDialog('dayOffType')">help</mat-icon>
             <span class="detail">假別天數總覽</span>
         </p>
         <div class="yearlyLeaveStas">

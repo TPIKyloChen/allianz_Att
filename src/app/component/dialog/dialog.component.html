@@ -1,0 +1,15 @@
+<button mat-icon-button class='closeDialog' matDialogClose>
+    <mat-icon>clear</mat-icon>
+</button>
+<div class="wrap">
+    <h2>{{data.title}}</h2>
+    <img src="{{data.image}}" alt="">
+    <h5>{{data.label}}</h5>
+    <p>{{data.message}}</p>
+    <p class="messageList" *ngFor="let item of data.messageList">{{item}}</p>
+    <div class="footerBtn" *ngIf="data.typBtn !== ''">
+        <button *ngIf="data.typBtn === 'A'" class="close">關閉</button>
+        <button *ngIf="data.typBtn === 'Q'" class="confirm">是</button>
+        <button *ngIf="data.typBtn === 'Q'" class="no">否</button>
+    </div>
+</div>

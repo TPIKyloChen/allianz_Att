@@ -66,17 +66,6 @@
     display: flex;
     justify-content: center;
     margin-top: 31px;
-    .save, .submited {
-        border: 2px solid #007ab3;
-        color: #007ab3;
-        font-size: 14px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        width: 109px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
     :nth-child(1) {
         background-color: #007ab3;
         color: #fff;

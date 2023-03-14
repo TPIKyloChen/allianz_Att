@@ -21,6 +21,59 @@ p {
     text-align: center;
 }
 
+// title style
+h2 {
+    align-items: top;
+    color: #414141;
+    display: inline-flex;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    line-height: normal;
+    text-align: left;
+    white-space: nowrap;
+    &::before {
+        background-image: linear-gradient(to bottom,#003781 60%,#007D8C 40%);
+        display: inline-block;
+        content: " ";
+        height: 1.5rem;
+        margin-left: 6px;
+        margin-right: 10px;
+        min-width: 4px;
+        position: relative;
+        text-align: start;
+        top: 0;
+        vertical-align: top;
+    }
+}
+
+.confoirm, .close {
+    background-color: #007ab3;
+    color: #fff;
+    cursor: pointer;
+}
+
+.save, .submited, .no {
+    border: 2px solid #007ab3;
+    color: #007ab3;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 109px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.closeDialog {
+    color:#4a4a4a;
+    cursor: pointer;
+    float: right;
+    outline: none;
+    clear: both;
+}
+
 // -----material 客製化-----
 // mat-form-field
 .datePicker{
@@ -71,7 +124,19 @@ p {
     .mat-pseudo-checkbox-checked::after {
         color: $mainThemeColor;
     }
-
+    // Tab
+    .mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline {
+        border-color: $mainThemeColor;
+    }
+    .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+        color: $mainThemeColor;
+    }
+    .mat-mdc-tab{
+        &:hover {
+            background: rgb(0, 123, 179, .1);
+        }
+    }
+    // Tab
 }
 
 // panalClass
@@ -99,6 +164,11 @@ p {
         color: rgba(0, 0, 0, 0.87);
     }
     // select
+}
+
+// Dialog
+.padding-dialog .mat-mdc-dialog-surface {
+    padding: 20px 30px;
 }
 // -----material 客製化-----
 

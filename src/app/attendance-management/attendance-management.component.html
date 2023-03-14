@@ -1,21 +1,20 @@
 <h2>
     差勤管理
 </h2>
-<div>
-    <!-- toggle 假單與差勤 -->
-    <mat-tab-group animationDuration="0ms" [(selectedIndex)]="tabIndex" (selectedTabChange)="tabChange($event)" disableRipple>
-        <mat-tab label="差勤">
-            <ng-template mat-tab-label>
-                <span class="labelStyle">差勤</span>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="請/銷假">
-            <ng-template mat-tab-label>
-                <span class="labelStyle">請/銷假</span>
-            </ng-template>
-        </mat-tab>
-    </mat-tab-group>
-</div>
+
+<!-- toggle 假單與差勤 -->
+<mat-tab-group animationDuration="0ms" class="datePicker" [(selectedIndex)]="tabIndex" (selectedTabChange)="tabChange($event)" disableRipple>
+    <mat-tab panelClass="matRole" label="差勤">
+        <ng-template mat-tab-label>
+            <span>差勤</span>
+        </ng-template>
+    </mat-tab>
+    <mat-tab panelClass="matRole" label="請/銷假">
+        <ng-template mat-tab-label>
+            <span>請/銷假</span>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>
 
 <!-- 年度統計 -->
 <app-yearly-stas></app-yearly-stas>

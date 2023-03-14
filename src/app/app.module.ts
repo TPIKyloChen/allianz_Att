@@ -11,6 +11,7 @@ import { AttendanceManagementComponent } from './attendance-management/attendanc
 import { CollapseComponent } from './component/collapse/collapse.component';
 import { DatepickerComponent } from './component/datepicker/datepicker.component';
 import { DayOffComponent } from './attendance-management/day-off/day-off.component';
+import { DialogComponent } from './component/dialog/dialog.component';
 import { ErrandsComponent } from './attendance-management/errands/errands.component';
 import { MainZoneComponent } from './main-zone/main-zone.component';
 import { SelectComponent } from './component/select/select.component';
@@ -26,6 +27,7 @@ import { MaterialModule } from './material.module';
     CollapseComponent,
     DatepickerComponent,
     DayOffComponent,
+    DialogComponent,
     ErrandsComponent,
     SelectComponent,
     TableComponent,
