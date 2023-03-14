@@ -5,8 +5,23 @@ import { DayOffComponent } from './day-off/day-off.component';
 import { ErrandsComponent } from './errands/errands.component';
 import { ShareModule } from '@app/share/share.module';
 import { RouterModule, Routes } from '@angular/router';
-import { AttendanceManagementRoutingModule } from './attendance-management-routing.module';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: AttendanceManagementComponent,
+    children: [
+      {
+        path: 'errands',
+        component: ErrandsComponent,
+      },
+      {
+        path: 'dayoff',
+        component: DayOffComponent,
+      },
+    ],
+  },
+];
 export class AppRoutingModule {}
 @NgModule({
   declarations: [
@@ -14,10 +29,6 @@ export class AppRoutingModule {}
     DayOffComponent,
     ErrandsComponent,
   ],
-  imports: [
-    CommonModule,
-    ShareModule,
-    AttendanceManagementRoutingModule
-  ],
+  imports: [CommonModule, ShareModule, RouterModule.forChild(routes)],
 })
-export class AttendanceManagementModule { }
+export class AttendanceManagementModule {}

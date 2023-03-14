@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MainZoneComponent } from './features/main-zone/main-zone.component';
-
 const routes: Routes = [
-  { path: '', component: MainZoneComponent},
+  {
+    path: '',
+    pathMatch: 'full',
+    loadChildren: () =>
+      import('@features/main-zone/main-zone.module').then(
+        (m) => m.MainZoneModule
+      ),
+  },
   {
     path: 'sign',
     loadChildren: () =>
@@ -15,15 +20,15 @@ const routes: Routes = [
   {
     path: 'attendance',
     loadChildren: () =>
-      import('@features/attendance-management/attendance-management.module').then(
-        (m) => m.AttendanceManagementModule
-      ),
+      import(
+        '@features/attendance-management/attendance-management.module'
+      ).then((m) => m.AttendanceManagementModule),
   },
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '**', redirectTo: '/' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

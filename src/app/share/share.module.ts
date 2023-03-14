@@ -9,7 +9,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { SelectComponent } from './components/select/select.component';
 import { TableComponent } from './components/table/table.component';
 import { YearlyStasComponent } from './components/yearly-stas/yearly-stas.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const components = [
   SampleComponent,
@@ -22,9 +22,7 @@ const components = [
   YearlyStasComponent,
 ];
 
-const modules = [MaterialModule, ReactiveFormsModule,];
-
-
+const modules = [MaterialModule, FormsModule, ReactiveFormsModule];
 
 @NgModule({
   declarations: [...components],
