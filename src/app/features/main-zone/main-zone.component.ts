@@ -13,7 +13,7 @@ export class MainZoneComponent {
   ngOnInit(): void {
     
   }
-  goto(i: number) { // 前往路徑
+  goto(i: number) { // 前往路徑B_item
     this.router.navigate(["attendance/errands"]);
   }
 }
