@@ -1,7 +1,14 @@
 <div class="formContent">
     <div class="type">
         <label for="item">
-            <sup>*</sup>{{label}}
+            <div class="title">
+                <sup>*</sup>
+                <span>{{label}}</span>
+            </div>
+            <div class="info">
+                <span>假別說明</span>
+                <mat-icon >help</mat-icon>
+            </div>
         </label>
         <mat-form-field appearance="fill" class="datePicker">
             <mat-icon>expand_more</mat-icon>
@@ -13,3 +20,4 @@
         </mat-form-field>
     </div>
 </div>
+<div class="hint">剩餘天數14天</div>

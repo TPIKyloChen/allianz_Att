@@ -1,8 +1,8 @@
 <ng-container *ngIf="isExpand">
     <div class="datePicker">
-        <app-datepicker></app-datepicker>
-        <app-datepicker></app-datepicker>
-        <app-select></app-select>
+        <app-datepicker [label]="'請假開始日'"></app-datepicker>
+        <app-datepicker [label]="'請假結束日'"></app-datepicker>
+        <app-select [label]="'出勤狀況'"></app-select>
     </div>
 
     <div class="search">

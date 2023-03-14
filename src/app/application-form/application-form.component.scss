@@ -44,6 +44,15 @@
         p {
             text-align: left;
             margin-bottom: 6px;
+            font-weight: bold;
+            span {
+                color: #c2c2c2;
+            }
+        }
+        .note {
+            span {
+                font-weight: bold;
+            }
         }
         label {
             background-color: #007ab3;
@@ -52,6 +61,7 @@
             font-size: 13px;
             height: 32px;
             line-height: 32px;
+            margin-top: 6px;
             text-align: center;
             width: 88px;
         }

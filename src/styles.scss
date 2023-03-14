@@ -124,6 +124,11 @@ h2 {
     .mat-pseudo-checkbox-checked::after {
         color: $mainThemeColor;
     }
+    // Select
+    .mat-mdc-form-field-subscript-wrapper {
+        display: none;
+    }
+    // Select
     // Tab
     .mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline {
         border-color: $mainThemeColor;
